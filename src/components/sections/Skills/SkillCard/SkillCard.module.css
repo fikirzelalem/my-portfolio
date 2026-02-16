@@ -15,7 +15,7 @@
 
 .skillCard:hover {
   background: var(--glass-bg-medium);
-  border-color: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-4px);
   box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
 }
@@ -44,6 +44,10 @@
 .icon {
   font-size: 2rem;
   color: var(--color-text-primary);
+}
+
+.skillCard:hover .icon {
+  color: #ffffff;
 }
 
 .skillName {

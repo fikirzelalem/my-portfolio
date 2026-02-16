@@ -20,9 +20,10 @@ body {
     'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
   background: linear-gradient(
     135deg,
-    #0f0f1e 0%,
-    #1a1a2e 50%,
-    #16213e 100%
+    #1a1a1a 0%,
+    #2a2a2a 30%,
+    #252525 60%,
+    #1f1f1f 100%
   );
   background-attachment: fixed;
   color: var(--color-text-primary);
@@ -38,34 +39,34 @@ body::after {
   position: fixed;
   z-index: -1;
   border-radius: 50%;
-  filter: blur(100px);
-  opacity: 0.3;
-  animation: float 20s ease-in-out infinite;
+  filter: blur(120px);
+  opacity: 0.2;
+  animation: float 25s ease-in-out infinite;
 }
 
 body::before {
-  width: 600px;
-  height: 600px;
-  top: -300px;
-  right: -300px;
+  width: 700px;
+  height: 700px;
+  top: -350px;
+  right: -350px;
   background: radial-gradient(
     circle,
-    var(--color-accent-primary) 0%,
+    rgba(100, 100, 100, 0.4) 0%,
     transparent 70%
   );
 }
 
 body::after {
-  width: 800px;
-  height: 800px;
-  bottom: -400px;
-  left: -400px;
+  width: 900px;
+  height: 900px;
+  bottom: -450px;
+  left: -450px;
   background: radial-gradient(
     circle,
-    var(--color-accent-secondary) 0%,
+    rgba(80, 80, 80, 0.3) 0%,
     transparent 70%
   );
-  animation-delay: -10s;
+  animation-delay: -12s;
 }
 
 @keyframes float {
@@ -129,13 +130,12 @@ a:hover {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--glass-bg-medium);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 5px;
-  backdrop-filter: blur(10px);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--glass-bg-light);
+  background: rgba(255, 255, 255, 0.25);
 }
 
 /* Container */

@@ -1,18 +1,18 @@
 :root {
-  /* Color Palette - Glassmorphism optimized */
-  --color-bg-primary: #0f0f1e;
-  --color-bg-secondary: #1a1a2e;
+  /* Color Palette - Dark grey theme */
+  --color-bg-primary: #1a1a1a;
+  --color-bg-secondary: #2a2a2a;
   --color-accent-primary: #6366f1;
   --color-accent-secondary: #8b5cf6;
   --color-text-primary: #ffffff;
-  --color-text-secondary: #a0a0b0;
+  --color-text-secondary: #b0b0b0;
 
-  /* Glass Effect Variables */
-  --glass-bg-light: rgba(255, 255, 255, 0.1);
-  --glass-bg-medium: rgba(255, 255, 255, 0.15);
-  --glass-bg-dark: rgba(255, 255, 255, 0.05);
-  --glass-border: rgba(255, 255, 255, 0.2);
-  --glass-shadow: rgba(0, 0, 0, 0.1);
+  /* Glass Effect Variables - Dark theme */
+  --glass-bg-light: rgba(255, 255, 255, 0.05);
+  --glass-bg-medium: rgba(255, 255, 255, 0.1);
+  --glass-bg-dark: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.15);
+  --glass-shadow: rgba(0, 0, 0, 0.3);
 
   /* Blur Amounts */
   --blur-sm: 10px;
