@@ -27,20 +27,25 @@
     function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
+          // Double rAF ensures the browser paints the hidden state before transitioning
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              entry.target.classList.add('revealed');
+            });
+          });
         } else {
           entry.target.classList.remove('revealed');
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.15 }
   );
 
   function observeReveals() {
     document.querySelectorAll('.reveal').forEach(function (el) {
       revealObserver.observe(el);
     });
-    document.querySelectorAll('.slide-left, .slide-right').forEach(function (el) {
+    document.querySelectorAll('.slide-left, .slide-right, .reveal-left, .reveal-right').forEach(function (el) {
       slideObserver.observe(el);
     });
   }
