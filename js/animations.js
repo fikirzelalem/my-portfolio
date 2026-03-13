@@ -23,7 +23,7 @@
   );
 
   function observeReveals() {
-    document.querySelectorAll('.reveal').forEach(function (el) {
+    document.querySelectorAll('.reveal, .slide-left, .slide-right').forEach(function (el) {
       revealObserver.observe(el);
     });
   }

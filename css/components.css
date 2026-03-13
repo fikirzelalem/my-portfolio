@@ -171,3 +171,20 @@
   display: inline-block;
   animation: slideFromRight 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.45s both;
 }
+
+/* ── Scroll-triggered directional slides ── */
+.slide-left,
+.slide-right {
+  display: inline-block;
+  opacity: 0;
+  transition:
+    opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.75s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.slide-left  { transform: translateX(-60px); }
+.slide-right { transform: translateX(60px); transition-delay: 0.18s; }
+.slide-left.revealed,
+.slide-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
