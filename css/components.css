@@ -1,8 +1,8 @@
 /* =====================================================
-   COMPONENTS — glass · buttons · section titles · reveals
+   COMPONENTS — cards · buttons · section titles · reveals
    ===================================================== */
 
-/* ── Glass card ── */
+/* ── Card ── */
 .glass {
   background: var(--glass-bg);
   backdrop-filter: blur(var(--glass-blur));
@@ -18,50 +18,49 @@
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
   border-radius: var(--r-full);
-  font-family: inherit;
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
   cursor: pointer;
   border: none;
   text-decoration: none;
   transition: transform var(--t-spring), box-shadow var(--t-normal), background var(--t-normal);
   white-space: nowrap;
+  letter-spacing: 0.01em;
 }
-.btn:hover { transform: translateY(-3px); }
-.btn:active { transform: translateY(-1px); }
+.btn:hover  { transform: translateY(-2px); }
+.btn:active { transform: translateY(0); }
 
 .btn-primary {
-  background: var(--grad-primary);
-  color: #fff;
-  box-shadow: 0 4px 20px var(--glow-1);
+  background: var(--accent-1);
+  color: var(--bg-tertiary);
+  box-shadow: var(--shadow-md);
 }
-.btn-primary:hover { box-shadow: 0 8px 32px var(--glow-1), 0 0 0 1px rgba(255,255,255,0.1); }
+.btn-primary:hover { box-shadow: var(--shadow-lg); }
 
 .btn-outline {
   background: transparent;
   color: var(--text-primary);
-  border: 1.5px solid var(--glass-border-glow);
+  border: 1.5px solid var(--glass-border);
 }
 .btn-outline:hover {
-  background: var(--glass-bg-light);
-  border-color: var(--accent-1);
-  box-shadow: 0 0 20px var(--glow-1);
+  border-color: var(--accent-2);
+  background: var(--glass-bg-dark);
 }
 
 .btn-ghost {
-  background: var(--glass-bg-light);
+  background: var(--glass-bg-dark);
   color: var(--text-secondary);
   border: 1px solid var(--glass-border);
 }
 .btn-ghost:hover {
   color: var(--text-primary);
-  background: rgba(255,255,255,0.07);
-  border-color: var(--glass-border-glow);
+  border-color: var(--accent-2);
 }
 
 .btn-sm {
-  padding: 0.5rem 1.1rem;
-  font-size: 0.82rem;
+  padding: 0.45rem 1rem;
+  font-size: 0.80rem;
 }
 .btn-full { width: 100%; justify-content: center; }
 
@@ -74,36 +73,34 @@
 }
 .section-tag {
   display: inline-block;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--accent-1);
-  background: rgba(99,102,241,0.10);
-  border: 1px solid rgba(99,102,241,0.25);
-  border-radius: var(--r-full);
-  padding: 0.25rem 0.9rem;
+  color: var(--accent-2);
   margin-bottom: 0.75rem;
 }
 .section-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.5rem);
   color: var(--text-primary);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
 }
 .section-subtitle {
   text-align: center;
   color: var(--text-secondary);
   max-width: 540px;
   margin: 0 auto var(--sp-md);
-  font-size: 1.05rem;
+  font-size: 1rem;
 }
 
 /* ── Reveal animations ── */
 .reveal {
   opacity: 0;
-  transform: translateY(36px);
+  transform: translateY(28px);
   transition:
-    opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1);
+    opacity 0.65s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);
   transition-delay: var(--delay, 0s);
 }
 .reveal.revealed {
@@ -111,33 +108,33 @@
   transform: translateY(0);
 }
 
-/* ── Social buttons (icon circles) ── */
+/* ── Social icon buttons ── */
 .social-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  transition: color var(--t-normal), transform var(--t-spring), box-shadow var(--t-normal);
+  transition: color var(--t-normal), transform var(--t-spring), box-shadow var(--t-normal), border-color var(--t-normal);
 }
 .social-btn:hover {
   color: var(--text-primary);
-  transform: translateY(-3px) scale(1.1);
-  box-shadow: 0 0 18px var(--glow-1);
-  border-color: var(--glass-border-glow);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-2);
 }
 
 /* ── Tech tags ── */
 .tech-tag {
   display: inline-block;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 500;
-  color: var(--accent-3);
-  background: rgba(6,182,212,0.08);
-  border: 1px solid rgba(6,182,212,0.20);
+  color: var(--accent-2);
+  background: rgba(120, 96, 74, 0.08);
+  border: 1px solid rgba(120, 96, 74, 0.18);
   border-radius: var(--r-full);
   padding: 0.2rem 0.65rem;
 }
@@ -146,8 +143,8 @@
 .cursor {
   display: inline-block;
   width: 2px;
-  height: 1.1em;
-  background: var(--accent-1);
+  height: 1em;
+  background: var(--accent-2);
   margin-left: 2px;
   vertical-align: middle;
   border-radius: 2px;

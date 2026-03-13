@@ -1,5 +1,5 @@
 /* =====================================================
-   BASE — reset · body · orbs · typography · scrollbar
+   BASE — reset · body · typography · scrollbar
    ===================================================== */
 
 *, *::before, *::after {
@@ -22,73 +22,71 @@ body {
   min-height: 100vh;
 }
 
-/* ── Animated gradient background ── */
+/* ── Subtle warm texture overlay ── */
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  z-index: -3;
+  z-index: -2;
   background:
-    radial-gradient(ellipse 80% 50% at 10% 10%, rgba(99,102,241,0.10) 0%, transparent 65%),
-    radial-gradient(ellipse 60% 70% at 90% 80%, rgba(139,92,246,0.08) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 50% 50%, rgba(6,182,212,0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 50% at 15% 10%, rgba(120,96,74,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 60% at 85% 85%, rgba(160,120,80,0.05) 0%, transparent 60%),
     var(--bg-primary);
 }
 
-/* ── Floating orbs ── */
-.bg-orbs { position: fixed; inset: 0; z-index: -2; pointer-events: none; overflow: hidden; }
+/* ── Soft floating orbs ── */
+.bg-orbs { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 
 .orb {
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
-  opacity: 0.55;
+  filter: blur(100px);
+  opacity: 0.35;
 }
-
 .orb-1 {
-  width: 700px; height: 700px;
-  background: radial-gradient(circle, rgba(99,102,241,0.35) 0%, transparent 70%);
-  top: -250px; right: -200px;
-  animation: orbFloat1 22s ease-in-out infinite alternate;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(160,120,80,0.25) 0%, transparent 70%);
+  top: -200px; right: -150px;
+  animation: orbFloat1 24s ease-in-out infinite alternate;
 }
 .orb-2 {
-  width: 550px; height: 550px;
-  background: radial-gradient(circle, rgba(139,92,246,0.28) 0%, transparent 70%);
-  bottom: 10%; left: -180px;
-  animation: orbFloat2 28s ease-in-out infinite alternate;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(120,96,74,0.20) 0%, transparent 70%);
+  bottom: 10%; left: -150px;
+  animation: orbFloat2 30s ease-in-out infinite alternate;
 }
 .orb-3 {
-  width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(6,182,212,0.22) 0%, transparent 70%);
-  top: 45%; right: 15%;
-  animation: orbFloat3 18s ease-in-out infinite alternate;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(200,180,150,0.18) 0%, transparent 70%);
+  top: 40%; right: 20%;
+  animation: orbFloat3 20s ease-in-out infinite alternate;
 }
 .orb-4 {
-  width: 350px; height: 350px;
-  background: radial-gradient(circle, rgba(236,72,153,0.18) 0%, transparent 70%);
-  bottom: 30%; right: 5%;
-  animation: orbFloat4 24s ease-in-out infinite alternate;
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(180,155,120,0.15) 0%, transparent 70%);
+  bottom: 25%; right: 5%;
+  animation: orbFloat4 26s ease-in-out infinite alternate;
 }
 
 @keyframes orbFloat1 {
   0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(-60px, 80px) scale(1.12); }
-  100% { transform: translate(40px, -50px) scale(0.92); }
+  50%  { transform: translate(-50px, 70px) scale(1.08); }
+  100% { transform: translate(30px, -40px) scale(0.94); }
 }
 @keyframes orbFloat2 {
   0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(80px, -60px) scale(1.08); }
-  100% { transform: translate(-30px, 40px) scale(0.95); }
+  50%  { transform: translate(60px, -50px) scale(1.06); }
+  100% { transform: translate(-20px, 35px) scale(0.96); }
 }
 @keyframes orbFloat3 {
   0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(50px, 70px) scale(1.15); }
-  100% { transform: translate(-40px, -30px) scale(0.90); }
+  50%  { transform: translate(40px, 60px) scale(1.10); }
+  100% { transform: translate(-30px, -25px) scale(0.92); }
 }
 @keyframes orbFloat4 {
   0%   { transform: translate(0, 0) scale(1); }
-  50%  { transform: translate(-70px, -50px) scale(1.10); }
-  100% { transform: translate(30px, 60px) scale(0.88); }
+  50%  { transform: translate(-55px, -40px) scale(1.07); }
+  100% { transform: translate(25px, 50px) scale(0.90); }
 }
 
 /* ── Scroll progress bar ── */
@@ -97,10 +95,9 @@ body::before {
   top: 0; left: 0;
   height: 2px;
   width: 0%;
-  background: var(--grad-full);
+  background: var(--grad-primary);
   z-index: 9999;
   transition: width 0.1s linear;
-  box-shadow: 0 0 8px var(--glow-1);
 }
 
 /* ── Container ── */
@@ -112,9 +109,11 @@ body::before {
 
 /* ── Typography ── */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
 }
 
 p { color: var(--text-secondary); }
@@ -135,23 +134,23 @@ img, svg { display: block; max-width: 100%; }
 }
 
 /* ── Scrollbar ── */
-::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg-primary); }
 ::-webkit-scrollbar-thumb {
-  background: var(--glass-border-glow);
+  background: var(--text-muted);
   border-radius: var(--r-full);
 }
-::-webkit-scrollbar-thumb:hover { background: var(--accent-1); }
+::-webkit-scrollbar-thumb:hover { background: var(--accent-2); }
 
 /* ── Selection ── */
 ::selection {
-  background: rgba(99,102,241,0.35);
+  background: rgba(120, 96, 74, 0.20);
   color: var(--text-primary);
 }
 
 /* ── Focus ── */
 :focus-visible {
-  outline: 2px solid var(--accent-1);
+  outline: 2px solid var(--accent-2);
   outline-offset: 3px;
   border-radius: var(--r-sm);
 }

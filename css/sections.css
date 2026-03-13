@@ -14,7 +14,7 @@
   transition: background var(--t-normal), backdrop-filter var(--t-normal), box-shadow var(--t-normal);
 }
 #header.scrolled {
-  background: rgba(7,7,26,0.85);
+  background: rgba(234, 230, 222, 0.88);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   box-shadow: 0 1px 0 var(--glass-border);
@@ -220,7 +220,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: var(--shadow-glow-lg);
+  box-shadow: var(--shadow-lg);
 }
 .avatar-initials {
   font-size: 3rem;
@@ -235,7 +235,7 @@
   border: 2px solid transparent;
   background:
     linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
-    var(--grad-full) border-box;
+    var(--grad-warm) border-box;
   animation: ringRotate 8s linear infinite;
 }
 .avatar-ring-2 {
@@ -534,18 +534,17 @@
 .skill-meta span:last-child { color: var(--accent-1); font-weight: 600; }
 
 .skill-bar {
-  height: 5px;
-  background: rgba(255,255,255,0.06);
+  height: 4px;
+  background: rgba(28, 25, 23, 0.08);
   border-radius: var(--r-full);
   overflow: hidden;
 }
 .skill-bar-fill {
   height: 100%;
   width: 0%;
-  background: var(--grad-primary);
+  background: var(--grad-warm);
   border-radius: var(--r-full);
   transition: width 1.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 0 8px var(--glow-1);
 }
 
 /* ══════════════════════════════
