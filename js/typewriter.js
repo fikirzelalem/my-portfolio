@@ -1,11 +1,11 @@
 // Typewriter effect — cycles through roles
 (function () {
   const roles = [
+    'iOS Developer',
     'Full Stack Developer',
-    'UI/UX Enthusiast',
-    'Open Source Contributor',
+    'CS Student at Howard',
+    'Data Enthusiast',
     'Problem Solver',
-    'Creative Coder',
   ];
 
   const el = document.getElementById('typewriter');
