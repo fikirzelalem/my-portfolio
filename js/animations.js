@@ -22,9 +22,26 @@
     { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
   );
 
+  // Separate observer for slide elements — re-triggers on every scroll pass
+  const slideObserver = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+        } else {
+          entry.target.classList.remove('revealed');
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
   function observeReveals() {
-    document.querySelectorAll('.reveal, .slide-left, .slide-right').forEach(function (el) {
+    document.querySelectorAll('.reveal').forEach(function (el) {
       revealObserver.observe(el);
+    });
+    document.querySelectorAll('.slide-left, .slide-right').forEach(function (el) {
+      slideObserver.observe(el);
     });
   }
 
