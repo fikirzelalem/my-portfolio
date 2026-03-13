@@ -194,3 +194,39 @@
   opacity: 1;
   transform: translateX(0);
 }
+
+/* ── Intro splash ── */
+@keyframes hiIn {
+  from { opacity: 0; transform: scale(0.5); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes hiOut {
+  from { opacity: 1; transform: scale(1); }
+  to   { opacity: 0; transform: scale(0.05); }
+}
+@keyframes overlayOut {
+  from { opacity: 1; }
+  to   { opacity: 0; visibility: hidden; }
+}
+
+.intro-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: overlayOut 0.4s ease 2s forwards;
+}
+.intro-hi {
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+  font-size: clamp(18vw, 22vw, 300px);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  animation:
+    hiIn  0.55s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s both,
+    hiOut 0.5s  cubic-bezier(0.4, 0, 0.6, 1)       1.3s  forwards;
+}

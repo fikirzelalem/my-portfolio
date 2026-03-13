@@ -24,6 +24,11 @@
   </head>
 
   <body>
+    <!-- Intro splash -->
+    <div class="intro-overlay" id="introOverlay" aria-hidden="true">
+      <span class="intro-hi">Hi</span>
+    </div>
+
     <!-- Animated background orbs -->
     <div class="bg-orbs" aria-hidden="true">
       <div class="orb orb-1"></div>
@@ -500,6 +505,13 @@
     </footer>
 
     <!-- Scripts -->
+    <script>
+      // Remove intro overlay from DOM after animation finishes
+      setTimeout(function () {
+        var o = document.getElementById('introOverlay');
+        if (o) o.remove();
+      }, 2500);
+    </script>
     <script src="js/typewriter.js"></script>
     <script src="js/tilt.js"></script>
     <script src="js/animations.js"></script>
