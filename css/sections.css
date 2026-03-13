@@ -145,10 +145,11 @@
 }
 
 .hero-name {
-  font-size: clamp(3rem, 7vw, 5.5rem);
-  font-weight: 900;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'Inter', sans-serif;
+  font-size: clamp(3.8rem, 9vw, 7rem);
+  font-weight: 800;
   color: var(--text-primary);
-  line-height: 1.0;
+  line-height: 0.95;
   margin-bottom: 1rem;
   letter-spacing: -0.04em;
 }
