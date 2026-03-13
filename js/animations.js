@@ -23,7 +23,7 @@
   );
 
   function observeReveals() {
-    document.querySelectorAll('.reveal').forEach(function (el) {
+    document.querySelectorAll('.reveal, .reveal-left, .reveal-right').forEach(function (el) {
       revealObserver.observe(el);
     });
   }
