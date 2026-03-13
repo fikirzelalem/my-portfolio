@@ -19,7 +19,7 @@
     <!-- Fonts used -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
 
     <!-- Icons used -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -140,7 +140,19 @@
 
     <main>
       <!-- ==================== HERO ==================== -->
+      <div class="hero-scroll-wrapper" id="heroScrollWrapper">
       <section id="hero" class="hero">
+
+        <!-- Cursive name splash (fades out on scroll) -->
+        <div class="name-splash" id="nameSplash" aria-hidden="true">
+          <div class="name-splash-inner">
+            <span class="name-cursive">Fikir Demeke</span>
+            <span class="name-hint">scroll to enter</span>
+          </div>
+        </div>
+
+        <!-- Main hero content (fades in on scroll) -->
+        <div class="hero-content-layer" id="heroContentLayer">
         <div class="container hero-grid">
           <div class="hero-text">
             <span class="hero-greeting reveal">Hi there, I'm</span>
@@ -151,8 +163,8 @@
               I'm a <span id="typewriter" class="typewriter-text"></span><span class="cursor"></span>
             </p>
             <p class="hero-bio reveal" style="--delay: 0.3s">
-              CS student at Howard University building across iOS, web, and data.
-              I turn ideas into real products — from 3D mobile games to AI-powered web apps.
+              A motivated Computer Science student at Howard University, building my skills across iOS, web, and data.
+              I turn my ideas into real products; from 3D mobile games to AI-powered web-apps.
             </p>
             <div class="hero-actions reveal" style="--delay: 0.4s">
               <a href="#projects" class="btn btn-primary">
@@ -195,10 +207,13 @@
           <span class="scroll-label">scroll down</span>
           <i class="fas fa-chevron-down scroll-arrow"></i>
         </a>
+        </div><!-- /.hero-content-layer -->
       </section>
+      </div><!-- /.hero-scroll-wrapper -->
 
       <!-- ==================== ABOUT ==================== -->
       <section id="about" class="about section">
+
         <div class="container">
           <div class="section-header reveal">
             <span class="section-tag">Who I Am</span>
@@ -231,7 +246,7 @@
 
             <div class="about-stats reveal" style="--delay: 0.15s">
               <div class="stat-card glass">
-                <span style="font-size:1.75rem;font-weight:700;line-height:1;color:var(--text-primary)">Junior</span>
+                <span class="stat-number" style="font-size:1.75rem">Junior</span>
                 <span class="stat-label">Classification</span>
               </div>
               <div class="stat-card glass">
@@ -243,7 +258,7 @@
                 <span class="stat-label">Languages</span>
               </div>
               <div class="stat-card glass">
-                <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+                <span class="stat-number" data-target="3">0</span><span class="stat-plus">+</span>
                 <span class="stat-label">Certifications</span>
               </div>
             </div>
@@ -253,6 +268,7 @@
 
       <!-- ==================== PROJECTS ==================== -->
       <section id="projects" class="projects section">
+
         <div class="container">
           <div class="section-header reveal">
             <span class="section-tag">What I've Built</span>
@@ -286,7 +302,7 @@
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/fikirzelalem/Soulfragments" class="btn btn-sm btn-ghost" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                  <span class="btn btn-sm btn-ghost btn-disabled"><i class="fas fa-play"></i> Preview Soon</span>
+                  <span class="btn btn-sm btn-ghost btn-disabled"><i class="fas fa-play"></i> Demo</span>
                 </div>
               </div>
             </div>
@@ -306,8 +322,8 @@
                   <span class="tech-tag">NVIDIA Nemotron</span>
                 </div>
                 <div class="project-links">
-                  <span class="btn btn-sm btn-ghost btn-private"><i class="fas fa-lock"></i> Private</span>
-                  <span class="btn btn-sm btn-ghost btn-disabled"><i class="fas fa-play"></i> Preview Soon</span>
+                  <a href="https://github.com/fikirzelalem/Greenroute-ai" class="btn btn-sm btn-ghost" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
+                  <span class="btn btn-sm btn-ghost btn-disabled"><i class="fas fa-play"></i> Demo</span>
                 </div>
               </div>
             </div>
@@ -327,7 +343,7 @@
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/fikirzelalem/personal-finance-tracker-app" class="btn btn-sm btn-ghost" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                  <span class="btn btn-sm btn-ghost btn-disabled"><i class="fas fa-play"></i> Preview Soon</span>
+                  <span class="btn btn-sm btn-ghost btn-disabled"><i class="fas fa-play"></i> Demo</span>
                 </div>
               </div>
             </div>
@@ -348,7 +364,7 @@
                 </div>
                 <div class="project-links">
                   <a href="https://github.com/fikirzelalem/Real-Estate-Management-Java" class="btn btn-sm btn-ghost" target="_blank" rel="noopener"><i class="fab fa-github"></i> Code</a>
-                  <span class="btn btn-sm btn-ghost btn-disabled"><i class="fas fa-play"></i> Preview Soon</span>
+                  <span class="btn btn-sm btn-ghost btn-disabled"><i class="fas fa-play"></i> Demo</span>
                 </div>
               </div>
             </div>
@@ -378,6 +394,7 @@
 
       <!-- ==================== SKILLS ==================== -->
       <section id="skills" class="skills section">
+
         <div class="container">
           <div class="section-header reveal">
             <span class="section-tag">What I Know</span>
@@ -398,20 +415,20 @@
                   <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>JavaScript</span><span>80%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                  <div class="skill-meta"><span>JavaScript</span><span>60%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
                 </div>
                 <div class="skill-item">
                   <div class="skill-meta"><span>Java</span><span>75%</span></div>
                   <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>C / C++</span><span>70%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
+                  <div class="skill-meta"><span>C / C++</span><span>20%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="20"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>HTML / CSS</span><span>90%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="90"></div></div>
+                  <div class="skill-meta"><span>HTML / CSS</span><span>80%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
                 </div>
               </div>
             </div>
@@ -424,24 +441,24 @@
                   <div class="skill-bar"><div class="skill-bar-fill" data-width="82"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>React</span><span>78%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+                  <div class="skill-meta"><span>React</span><span>38%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="38"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>Flask</span><span>75%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+                  <div class="skill-meta"><span>Flask</span><span>65%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="65"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>Pandas</span><span>80%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="80"></div></div>
+                  <div class="skill-meta"><span>Pandas</span><span>50%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="50"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>Matplotlib</span><span>75%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
+                  <div class="skill-meta"><span>Matplotlib</span><span>55%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="55"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>NumPy</span><span>72%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="72"></div></div>
+                  <div class="skill-meta"><span>NumPy</span><span>60%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
                 </div>
               </div>
             </div>
@@ -466,12 +483,8 @@
                   <div class="skill-bar"><div class="skill-bar-fill" data-width="75"></div></div>
                 </div>
                 <div class="skill-item">
-                  <div class="skill-meta"><span>SQL / SQLite</span><span>70%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="70"></div></div>
-                </div>
-                <div class="skill-item">
-                  <div class="skill-meta"><span>Jupyter Notebook</span><span>78%</span></div>
-                  <div class="skill-bar"><div class="skill-bar-fill" data-width="78"></div></div>
+                  <div class="skill-meta"><span>SQL / SQLite</span><span>60%</span></div>
+                  <div class="skill-bar"><div class="skill-bar-fill" data-width="60"></div></div>
                 </div>
               </div>
             </div>
@@ -482,6 +495,7 @@
 
       <!-- ==================== CERTIFICATES ==================== -->
       <section id="certificates" class="certificates section">
+
         <div class="container">
           <div class="section-header reveal">
             <span class="section-tag">Credentials</span>
@@ -492,7 +506,7 @@
 
             <a class="cert-card glass reveal" href="assets/certificates/aws-cloud-practitioner.pdf" target="_blank" rel="noopener">
               <div class="cert-thumb">
-                <img src="assets/certificates/aws-cloud-practitioner.jpg" alt="AWS Certified Cloud Practitioner" onerror="this.parentElement.innerHTML='<i class=\'fab fa-aws\'></i>'" />
+                <img src="assets/certificates/cloudthumb.png" alt="AWS Certified Cloud Practitioner" onerror="this.parentElement.innerHTML='<i class=\'fab fa-aws\'></i>'" />
               </div>
               <div class="cert-info">
                 <h3 class="cert-title">AWS Certified Cloud Practitioner</h3>
@@ -504,7 +518,7 @@
 
             <a class="cert-card glass reveal" href="assets/certificates/codepath-webdev.pdf" target="_blank" rel="noopener" style="--delay: 0.1s">
               <div class="cert-thumb">
-                <img src="assets/certificates/codepath-webdev.jpg" alt="CodePath Web Development" onerror="this.parentElement.innerHTML='<i class=\'fas fa-code\'></i>'" />
+                <img src="assets/certificates/codethumb.png" alt="CodePath Web Development" onerror="this.parentElement.innerHTML='<i class=\'fas fa-code\'></i>'" />
               </div>
               <div class="cert-info">
                 <h3 class="cert-title">Web Development</h3>
@@ -516,7 +530,7 @@
 
             <a class="cert-card glass reveal" href="assets/certificates/codepath-cybersecurity.pdf" target="_blank" rel="noopener" style="--delay: 0.2s">
               <div class="cert-thumb">
-                <img src="assets/certificates/codepath-cybersecurity.jpg" alt="CodePath Intermediate Cybersecurity" onerror="this.parentElement.innerHTML='<i class=\'fas fa-shield-alt\'></i>'" />
+                <img src="assets/certificates/codethumb.png" alt="CodePath Intermediate Cybersecurity" onerror="this.parentElement.innerHTML='<i class=\'fas fa-shield-alt\'></i>'" />
               </div>
               <div class="cert-info">
                 <h3 class="cert-title">Intermediate Cybersecurity</h3>
@@ -532,19 +546,26 @@
 
       <!-- ==================== CONTACT ==================== -->
       <section id="contact" class="contact section">
+
         <div class="container">
           <div class="section-header reveal">
             <span class="section-tag">Let's Connect</span>
             <h2 class="section-title"><span class="slide-left">Get In</span> <span class="gradient-text slide-right">Touch</span></h2>
           </div>
-          <p class="section-subtitle reveal">Have a project in mind or just want to say hello? My inbox is always open.</p>
 
           <div class="contact-grid">
             <div class="contact-info reveal">
               <div class="contact-item glass">
                 <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                 <div>
-                  <h4>Email</h4>
+                  <h4>Personal</h4>
+                  <a href="mailto:fikirgenizele@gmail.com">fikirgenizele@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-item glass">
+                <div class="contact-icon"><i class="fas fa-university"></i></div>
+                <div>
+                  <h4>School</h4>
                   <a href="mailto:fikir.demeke@bison.howard.edu">fikir.demeke@bison.howard.edu</a>
                 </div>
               </div>
@@ -595,6 +616,7 @@
           </div>
         </div>
       </section>
+
     </main>
 
     <!-- ==================== FOOTER ==================== -->
@@ -628,5 +650,6 @@
     <script src="js/tilt.js"></script>
     <script src="js/animations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/hero-scroll.js"></script>
   </body>
 </html>

@@ -1,10 +1,10 @@
 // Typewriter effect — cycles through roles
 (function () {
   const roles = [
+    'Junior CS student at Howard University',
     'iOS Developer',
     'Full Stack Developer',
-    'CS Student at Howard',
-    'Data Enthusiast',
+    'Data & AI Enthusiast',
     'Problem Solver',
   ];
 

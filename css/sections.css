@@ -118,16 +118,90 @@
 }
 
 /* ══════════════════════════════
-   HERO
+   HERO SCROLL WRAPPER
 ══════════════════════════════ */
-.hero {
-  min-height: 100vh;
+.hero-scroll-wrapper {
+  height: 200vh;
+  position: relative;
+}
+
+/* ── Cursive name splash ── */
+.name-splash {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  pointer-events: none;
+  will-change: opacity, transform;
+}
+.name-splash-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.name-cursive {
+  font-family: 'Dancing Script', cursive;
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-weight: 700;
+  background: var(--grad-text);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+.name-hint {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  opacity: 0;
+  animation: hintFade 1s ease 1.5s forwards;
+}
+@keyframes hintFade {
+  to { opacity: 1; }
+}
+
+/* ── Scroll-in hero content ── */
+.hero-content-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  will-change: opacity, transform;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding-top: 80px;
-  position: relative;
+}
+
+/* ══════════════════════════════
+   SECTION FADE-IN
+══════════════════════════════ */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.section.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════
+   HERO
+══════════════════════════════ */
+.hero {
+  height: 100vh;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
 }
 
 .hero-grid {
