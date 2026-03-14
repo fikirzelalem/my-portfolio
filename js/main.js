@@ -93,13 +93,25 @@
         var btn = form.querySelector('button[type="submit"]');
         btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending…';
         btn.disabled  = true;
-        setTimeout(function () {
-          success.classList.add('visible');
-          form.reset();
+
+        fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            success.classList.add('visible');
+            form.reset();
+            setTimeout(function () { success.classList.remove('visible'); }, 5000);
+          } else {
+            alert('Something went wrong. Please email me directly.');
+          }
+        }).catch(function () {
+          alert('Something went wrong. Please email me directly.');
+        }).finally(function () {
           btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message';
           btn.disabled  = false;
-          setTimeout(function () { success.classList.remove('visible'); }, 5000);
-        }, 1200);
+        });
       });
     }
 
