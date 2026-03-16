@@ -1,4 +1,4 @@
-// Typewriter effect — cycles through roles
+//Fikir Demeke // Typewriter effect — cycles through roles
 (function () {
   const roles = [
     'Junior CS student at Howard University',
