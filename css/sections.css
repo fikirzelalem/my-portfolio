@@ -661,7 +661,6 @@
   box-shadow: var(--shadow-glow);
   border-color: var(--glass-border-glow);
 }
-.cert-card:hover .cert-view { opacity: 1; }
 
 /* Thumbnail */
 .cert-thumb {
@@ -716,23 +715,25 @@
   width: 100%;
 }
 
-/* External link icon */
+/* View Certificate button */
 .cert-view {
-  position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
-  width: 30px;
-  height: 30px;
-  background: var(--glass-bg);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--r-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.7rem;
+  gap: 0.4rem;
+  margin: 0 1.25rem 1.25rem;
+  padding: 0.55rem 1rem;
+  background: var(--glass-bg-light);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-full);
+  font-size: 0.82rem;
+  font-weight: 600;
   color: var(--accent-2);
-  opacity: 0;
-  transition: opacity var(--t-normal);
+  transition: background var(--t-fast), border-color var(--t-fast);
+}
+.cert-view:hover {
+  background: var(--glass-border-glow);
+  border-color: var(--accent-2);
 }
 
 @media (max-width: 768px) {
