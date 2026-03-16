@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Soul Fragments — A 3D action-adventure iOS game built with SceneKit and SwiftUI." />
+    <title>Soul Fragments — Fikir Demeke</title>
+
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
+  </head>
+
+  <body>
+    <!-- Floating orbs -->
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Nav -->
+    <nav class="project-nav" id="projectNav">
+      <div class="project-nav-inner">
+        <a href="../index.html#projects" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <a href="../index.html" class="logo">fd<span class="logo-dot">.</span></a>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="project-hero">
+      <div class="project-hero-bg" style="background: linear-gradient(135deg, #1a0a2e 0%, #4a1060 50%, #78604a 100%); opacity: 0.6;"></div>
+      <div class="project-hero-content">
+        <div class="project-hero-icon" style="background: linear-gradient(135deg, #78604a, #a07850);">
+          <i class="fas fa-gamepad"></i>
+        </div>
+        <div class="project-hero-meta">
+          <span class="project-badge-lg">Mobile / iOS</span>
+          <span class="project-badge-lg">Game Development</span>
+        </div>
+        <h1 class="gradient-text">Soul Fragments</h1>
+        <p class="project-tagline">A 3D action-adventure iOS game featuring dynamic AI enemies, particle effects, and immersive SceneKit environments.</p>
+      </div>
+    </section>
+
+    <!-- Body -->
+    <div class="project-body-wrap">
+
+      <!-- Overview -->
+      <div class="project-overview">
+        <div class="project-description">
+          <h2>About the Project</h2>
+          <p>Soul Fragments is a 3D action-adventure game built natively for iOS using Apple's SceneKit and SwiftUI frameworks. The game puts the player in a dark fantasy world where they must collect soul fragments scattered across procedurally designed environments while fending off AI-controlled enemies.</p>
+          <p>The project started as a personal challenge to explore Apple's 3D game development ecosystem without relying on third-party engines like Unity or Unreal. Everything — from the collision physics to the particle system — is built directly on top of SceneKit, giving me deep control over performance and visual fidelity on-device.</p>
+          <p>One of the most technically interesting parts was implementing the enemy AI pathfinding system using a custom graph-based approach, allowing enemies to navigate around obstacles and dynamically react to the player's position.</p>
+        </div>
+
+        <div class="project-sidebar">
+          <div class="sidebar-card">
+            <h4>Tech Stack</h4>
+            <div class="tech-tags-wrap">
+              <span class="tech-tag">Swift</span>
+              <span class="tech-tag">SceneKit</span>
+              <span class="tech-tag">SwiftUI</span>
+              <span class="tech-tag">Xcode</span>
+              <span class="tech-tag">GameplayKit</span>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <h4>Status</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">In Development</p>
+          </div>
+          <div class="sidebar-card">
+            <h4>Links</h4>
+            <a href="https://github.com/fikirzelalem/Soulfragments" class="sidebar-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> View Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Screenshots -->
+      <div class="project-screenshots">
+        <h2>Screenshots</h2>
+        <div class="screenshots-grid">
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features -->
+      <div class="project-features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-robot"></i></div>
+            <h3>Enemy AI Pathfinding</h3>
+            <p>Custom graph-based navigation system allowing enemies to dynamically track and react to the player across complex 3D terrain.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-explosion"></i></div>
+            <h3>Particle Effects</h3>
+            <p>SceneKit particle systems power all visual effects — soul collection bursts, hit feedback, ambient environmental particles.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Collision Detection</h3>
+            <p>Dynamic physics-based collision system handling player-enemy interactions, environmental hazards, and collectible pickups.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-mobile-alt"></i></div>
+            <h3>Native iOS Performance</h3>
+            <p>Built entirely with Apple's native frameworks — no third-party engine overhead, optimized for smooth frame rates on-device.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="project-cta">
+        <a href="https://github.com/fikirzelalem/Soulfragments" class="btn btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+        <a href="../index.html#projects" class="btn btn-ghost">
+          <i class="fas fa-arrow-left"></i> All Projects
+        </a>
+      </div>
+
+    </div>
+
+    <script>
+      // Sticky nav on scroll
+      var nav = document.getElementById('projectNav');
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+      }, { passive: true });
+    </script>
+  </body>
+</html>

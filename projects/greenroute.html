@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GreenRoute — AI-powered eco-route planner built with Python, Flask, and NVIDIA Nemotron." />
+    <title>GreenRoute — Fikir Demeke</title>
+
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
+  </head>
+
+  <body>
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <nav class="project-nav" id="projectNav">
+      <div class="project-nav-inner">
+        <a href="../index.html#projects" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <a href="../index.html" class="logo">fd<span class="logo-dot">.</span></a>
+      </div>
+    </nav>
+
+    <section class="project-hero">
+      <div class="project-hero-bg" style="background: linear-gradient(135deg, #0a2e1a 0%, #1a5e3a 50%, #3d7a5e 100%); opacity: 0.65;"></div>
+      <div class="project-hero-content">
+        <div class="project-hero-icon" style="background: linear-gradient(135deg, #3d7a5e, #2ecc71);">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <div class="project-hero-meta">
+          <span class="project-badge-lg">Full Stack</span>
+          <span class="project-badge-lg">AI / ML</span>
+        </div>
+        <h1 class="gradient-text">GreenRoute</h1>
+        <p class="project-tagline">An AI-powered eco-route planner that finds the most sustainable travel paths using natural language queries and real-time data.</p>
+      </div>
+    </section>
+
+    <div class="project-body-wrap">
+
+      <div class="project-overview">
+        <div class="project-description">
+          <h2>About the Project</h2>
+          <p>GreenRoute is a full-stack web application that helps users find the most environmentally friendly routes for their travel. Instead of optimizing purely for speed or distance, GreenRoute factors in carbon emissions, public transit options, and sustainability scores to recommend greener paths.</p>
+          <p>The app accepts natural language queries — you can type something like "I need to get from Howard University to downtown DC with the least carbon footprint" and GreenRoute's AI layer, powered by NVIDIA's Nemotron API, interprets the intent and surfaces the best eco-route options.</p>
+          <p>The backend is built in Python with Flask handling API routing and data processing. The frontend uses React for a dynamic, responsive UI. This project was built as part of a hackathon focused on climate tech solutions.</p>
+        </div>
+
+        <div class="project-sidebar">
+          <div class="sidebar-card">
+            <h4>Tech Stack</h4>
+            <div class="tech-tags-wrap">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">NVIDIA Nemotron</span>
+              <span class="tech-tag">REST API</span>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <h4>Status</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">In Development</p>
+          </div>
+          <div class="sidebar-card">
+            <h4>Links</h4>
+            <a href="https://github.com/fikirzelalem/Greenroute-ai" class="sidebar-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> View Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-screenshots">
+        <h2>Screenshots</h2>
+        <div class="screenshots-grid">
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+            <h3>Natural Language Queries</h3>
+            <p>Ask for routes in plain English. NVIDIA Nemotron parses intent and extracts origin, destination, and sustainability preferences.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+            <h3>Eco-Score Ranking</h3>
+            <p>Routes are ranked by a composite sustainability score factoring carbon emissions, transit type, and distance efficiency.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-server"></i></div>
+            <h3>Flask REST Backend</h3>
+            <p>Python Flask API handles route computation, AI query processing, and serves structured JSON responses to the frontend.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <h3>Interactive Route Map</h3>
+            <p>React frontend renders route options on an interactive map with color-coded sustainability indicators for each path.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-cta">
+        <a href="https://github.com/fikirzelalem/Greenroute-ai" class="btn btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+        <a href="../index.html#projects" class="btn btn-ghost">
+          <i class="fas fa-arrow-left"></i> All Projects
+        </a>
+      </div>
+
+    </div>
+
+    <script>
+      var nav = document.getElementById('projectNav');
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+      }, { passive: true });
+    </script>
+  </body>
+</html>
