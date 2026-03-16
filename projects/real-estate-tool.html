@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Real Estate Property Tool — Java OOP tool for property value evaluation and comparison." />
+    <title>Real Estate Property Tool — Fikir Demeke</title>
+
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
+  </head>
+
+  <body>
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <nav class="project-nav" id="projectNav">
+      <div class="project-nav-inner">
+        <a href="../index.html#projects" class="back-btn">
+          <i class="fas fa-arrow-left"></i> Back to Portfolio
+        </a>
+        <a href="../index.html" class="logo">fd<span class="logo-dot">.</span></a>
+      </div>
+    </nav>
+
+    <section class="project-hero">
+      <div class="project-hero-bg" style="background: linear-gradient(135deg, #0d1117 0%, #2c3240 50%, #57534e 100%); opacity: 0.65;"></div>
+      <div class="project-hero-content">
+        <div class="project-hero-icon" style="background: linear-gradient(135deg, #57534e, #78604a);">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="project-hero-meta">
+          <span class="project-badge-lg">Backend</span>
+          <span class="project-badge-lg">Java</span>
+        </div>
+        <h1 class="gradient-text">Real Estate Property Tool</h1>
+        <p class="project-tagline">A Java application for evaluating, comparing, and managing property data using object-oriented design and custom data structures.</p>
+      </div>
+    </section>
+
+    <div class="project-body-wrap">
+
+      <div class="project-overview">
+        <div class="project-description">
+          <h2>About the Project</h2>
+          <p>The Real Estate Property Tool is a Java-based command-line application designed to evaluate and compare residential and commercial properties. Users can load property data, filter by criteria like price range or location, and receive ranked comparisons based on value metrics.</p>
+          <p>The project was built as a deep dive into object-oriented programming principles. Every component — from the property model hierarchy to the search and sort engine — was designed with OOP patterns in mind: inheritance, encapsulation, polymorphism, and interface-driven design.</p>
+          <p>Custom data structures (linked lists, priority queues) were implemented from scratch for the core data management layer rather than relying entirely on Java's built-in collections. JUnit tests cover all critical logic paths to ensure accuracy and prevent regressions.</p>
+        </div>
+
+        <div class="project-sidebar">
+          <div class="sidebar-card">
+            <h4>Tech Stack</h4>
+            <div class="tech-tags-wrap">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">OOP</span>
+              <span class="tech-tag">JUnit</span>
+              <span class="tech-tag">File I/O</span>
+              <span class="tech-tag">Data Structures</span>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <h4>Status</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Completed</p>
+          </div>
+          <div class="sidebar-card">
+            <h4>Links</h4>
+            <a href="https://github.com/fikirzelalem/Real-Estate-Management-Java" class="sidebar-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> View Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-screenshots">
+        <h2>Screenshots</h2>
+        <div class="screenshots-grid">
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+          <div class="screenshot-slot">
+            <div class="screenshot-placeholder">
+              <i class="fas fa-image"></i>
+              <span>Add screenshot here</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-sitemap"></i></div>
+            <h3>OOP Architecture</h3>
+            <p>Property types (residential, commercial, land) modeled through an inheritance hierarchy with shared interfaces for comparison and filtering.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-database"></i></div>
+            <h3>Custom Data Structures</h3>
+            <p>Linked lists and priority queues built from scratch to manage property collections and power the ranking engine.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-vial"></i></div>
+            <h3>JUnit Test Suite</h3>
+            <p>Comprehensive unit tests covering property evaluation, data parsing, sorting logic, and edge cases to guarantee correctness.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-file-alt"></i></div>
+            <h3>File I/O</h3>
+            <p>Load and save property datasets from flat files, with a parsing layer that validates and maps raw data into typed property objects.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-cta">
+        <a href="https://github.com/fikirzelalem/Real-Estate-Management-Java" class="btn btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+        <a href="../index.html#projects" class="btn btn-ghost">
+          <i class="fas fa-arrow-left"></i> All Projects
+        </a>
+      </div>
+
+    </div>
+
+    <script>
+      var nav = document.getElementById('projectNav');
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+      }, { passive: true });
+    </script>
+  </body>
+</html>
