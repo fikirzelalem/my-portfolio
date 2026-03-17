@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HBCUhire: Opportunity hub for HBCU students aggregating jobs, internships, scholarships, and fellowships with AI-powered matching." />
+    <title>HBCUhire: Fikir Demeke</title>
+
+    <script>
+      (function () {
+        var t = localStorage.getItem('theme');
+        if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+      })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/variables.css" />
+    <link rel="stylesheet" href="../css/base.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="../css/project-page.css" />
+  </head>
+
+  <body>
+    <div class="bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <nav class="project-nav" id="projectNav">
+      <div class="project-nav-inner">
+        <button class="back-btn" onclick="history.back()">
+          <i class="fas fa-arrow-left"></i> Back
+        </button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <section class="project-hero">
+      <div class="project-hero-bg" style="background: linear-gradient(135deg, #0a0e2e 0%, #1a1a5e 50%, #2d2080 100%); opacity: 0.65;"></div>
+      <div class="project-hero-content">
+        <div class="project-hero-icon" style="background: linear-gradient(135deg, #1a3a5c, #a855f7);">
+          <i class="fas fa-briefcase"></i>
+        </div>
+        <div class="project-hero-meta">
+          <span class="project-badge-lg">Full Stack</span>
+          <span class="project-badge-lg">TypeScript</span>
+          <span class="project-badge-lg" style="background: rgba(233,30,140,0.15); color: #e91e8c; border-color: rgba(233,30,140,0.3);">In Development</span>
+        </div>
+        <h1 class="gradient-text">HBCUhire</h1>
+        <p class="project-tagline">A centralized opportunity hub for HBCU students, bringing jobs, internships, scholarships, and fellowships together in one place with AI-powered matching.</p>
+      </div>
+    </section>
+
+    <div class="project-body-wrap">
+
+      <div class="project-overview">
+        <div class="project-description">
+          <h2>About the Project</h2>
+          <p>HBCUhire is a full-stack platform built for HBCU students who are tired of hunting across ten different websites for opportunities. Jobs, internships, scholarships, fellowships, and hackathons, all in one place, filtered and matched to your school, major, and year.</p>
+          <p>The problem is real: HBCU students are often underrepresented on mainstream platforms and miss out on opportunities that are specifically designed for them simply because there's no single place to find them. HBCUhire is being built to change that.</p>
+          <p>This project is currently in active development. The core data pipeline and authentication are being built first, with AI matching and the full frontend coming in later phases.</p>
+        </div>
+
+        <div class="project-sidebar">
+          <div class="sidebar-card">
+            <h4>Tech Stack</h4>
+            <div class="tech-tags-wrap">
+              <span class="tech-tag">Next.js</span>
+              <span class="tech-tag">TypeScript</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Prisma</span>
+              <span class="tech-tag">AI</span>
+            </div>
+          </div>
+          <div class="sidebar-card">
+            <h4>Status</h4>
+            <p style="color: #e91e8c; font-size: 0.9rem; font-weight: 600;">In Development</p>
+          </div>
+          <div class="sidebar-card">
+            <h4>Links</h4>
+            <a href="https://github.com/fikirzelalem/HBCUhire" class="sidebar-link" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i> View Source Code
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-features">
+        <h2>Planned Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-layer-group"></i></div>
+            <h3>Unified Opportunity Feed</h3>
+            <p>Jobs, internships, scholarships, fellowships, and hackathons aggregated into one searchable, filterable feed.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-brain"></i></div>
+            <h3>AI Matching</h3>
+            <p>Opportunities ranked and matched to your profile based on major, year, school, and interests, so the most relevant ones surface first.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-user-graduate"></i></div>
+            <h3>Student Profiles</h3>
+            <p>Build a profile with your school, major, graduation year, and skills. Companies and scholarship orgs can discover you directly.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-bell"></i></div>
+            <h3>Deadline Alerts</h3>
+            <p>Get notified before scholarship and application deadlines close so nothing slips through the cracks.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-cta">
+        <a href="https://github.com/fikirzelalem/HBCUhire" class="btn btn-primary" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i> Follow on GitHub
+        </a>
+        <a href="../index.html#projects" class="btn btn-ghost">
+          <i class="fas fa-arrow-left"></i> All Projects
+        </a>
+      </div>
+
+    </div>
+
+    <script>
+      var nav = document.getElementById('projectNav');
+      window.addEventListener('scroll', function () {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+      }, { passive: true });
+    </script>
+    <script src="../js/theme.js"></script>
+  </body>
+</html>
