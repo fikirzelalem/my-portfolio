@@ -159,11 +159,42 @@
 
     </div>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+      <button class="lightbox-close" id="lightboxClose">&times;</button>
+      <img id="lightboxImg" src="" alt="" />
+    </div>
+
     <script>
       var nav = document.getElementById('projectNav');
       window.addEventListener('scroll', function () {
         nav.classList.toggle('scrolled', window.scrollY > 40);
       }, { passive: true });
+
+      var lightbox = document.getElementById('lightbox');
+      var lightboxImg = document.getElementById('lightboxImg');
+
+      document.querySelectorAll('.screenshot-slot img').forEach(function (img) {
+        img.addEventListener('click', function () {
+          lightboxImg.src = img.src;
+          lightboxImg.alt = img.alt;
+          lightbox.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', function (e) {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeLightbox();
+      });
     </script>
     <script src="../js/theme.js"></script>
   </body>
