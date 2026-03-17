@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Personal Finance Tracker — Python dashboard for tracking spending and visualizing financial trends." />
+    <meta name="description" content="Personal Finance Tracker — Multi-page Streamlit web app for tracking income, expenses, and budgets with interactive Plotly charts." />
     <title>Personal Finance Tracker — Fikir Demeke</title>
 
     <script>
@@ -52,9 +52,10 @@
         <div class="project-hero-meta">
           <span class="project-badge-lg">Data</span>
           <span class="project-badge-lg">Python</span>
+          <span class="project-badge-lg">Streamlit</span>
         </div>
         <h1 class="gradient-text">Personal Finance Tracker</h1>
-        <p class="project-tagline">A Python-powered dashboard for tracking spending habits, visualizing financial trends, and building smarter budgets.</p>
+        <p class="project-tagline">A multi-page Streamlit web app for tracking income and expenses, visualizing spending patterns, and managing budgets — all in an interactive dashboard.</p>
       </div>
     </section>
 
@@ -63,9 +64,9 @@
       <div class="project-overview">
         <div class="project-description">
           <h2>About the Project</h2>
-          <p>Personal Finance Tracker is a data-driven desktop application built in Python that helps users take control of their finances. The app lets you log income and expenses, categorize transactions, and then visualizes spending patterns through clean, interactive charts.</p>
-          <p>The core data pipeline uses Pandas for loading, cleaning, and aggregating transaction data from CSV files. Matplotlib handles all chart rendering — from monthly spending breakdowns to category-by-category pie charts and trend lines over time.</p>
-          <p>This project came from a real need — I wanted to actually understand where my money was going each month. Building it myself meant I could tailor the categories, metrics, and visualizations exactly to what was useful, rather than working around a generic app's limitations.</p>
+          <p>Personal Finance Tracker is a multi-page web app built with Python and Streamlit that helps you take real control of your finances. It tracks income and expenses, visualizes spending patterns through interactive Plotly charts, and lets you set and monitor monthly budgets per category.</p>
+          <p>The data pipeline uses Pandas for loading, cleaning, deduplication, and aggregation — all stored locally in CSV files so there's no database setup required. The app is split across four pages: an overview dashboard with KPI cards, a transaction manager, an interactive charts view, and a budget tracker with color-coded progress bars.</p>
+          <p>This came from a real need — I wanted to actually see where my money was going each month. Building it myself meant I could tailor every metric, category, and chart to what was actually useful, rather than working around a generic app's limitations.</p>
         </div>
 
         <div class="project-sidebar">
@@ -73,8 +74,9 @@
             <h4>Tech Stack</h4>
             <div class="tech-tags-wrap">
               <span class="tech-tag">Python</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Plotly</span>
               <span class="tech-tag">Pandas</span>
-              <span class="tech-tag">Matplotlib</span>
               <span class="tech-tag">CSV</span>
             </div>
           </div>
@@ -119,24 +121,34 @@
         <h2>Key Features</h2>
         <div class="features-grid">
           <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+            <h3>Overview Dashboard</h3>
+            <p>KPI cards for total income, expenses, net savings, and savings rate — with month-over-month comparison at a glance.</p>
+          </div>
+          <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-table"></i></div>
-            <h3>Transaction Logging</h3>
-            <p>Log and categorize income and expenses via CSV import. Pandas handles cleaning, deduplication, and aggregation automatically.</p>
+            <h3>Transaction Management</h3>
+            <p>Add, delete, and bulk-import transactions with automatic deduplication — importing the same CSV twice never creates duplicates.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
-            <h3>Spending Visualizations</h3>
-            <p>Monthly bar charts, category pie charts, and trend lines built with Matplotlib give a clear picture of where money is going.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon"><i class="fas fa-tags"></i></div>
-            <h3>Custom Categories</h3>
-            <p>Fully customizable spending categories — food, transport, subscriptions, and more — tailored to real spending habits.</p>
+            <h3>Interactive Charts</h3>
+            <p>Spending trend line, category donut chart, stacked monthly bar chart, and a daily spending heatmap — all built with Plotly.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon"><i class="fas fa-piggy-bank"></i></div>
             <h3>Budget Tracking</h3>
-            <p>Set monthly budget limits per category and get visual indicators when spending approaches or exceeds the target.</p>
+            <p>Set monthly limits per category with color-coded progress bars that shift from green to amber to red as you approach and exceed your budget.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-tags"></i></div>
+            <h3>Custom Categories</h3>
+            <p>Add and manage your own spending categories — food, transport, subscriptions, and anything else that fits your habits.</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fas fa-moon"></i></div>
+            <h3>Dark Theme UI</h3>
+            <p>Custom dark theme with gradient backgrounds and glowing metric cards configured via Streamlit's theme system.</p>
           </div>
         </div>
       </div>
