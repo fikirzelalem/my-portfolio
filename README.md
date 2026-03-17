@@ -1,6 +1,6 @@
-# Fikir Demeke — Personal Portfolio
+# Fikir Demeke, Personal Portfolio
 
-A fully custom personal portfolio website built from scratch using only vanilla HTML, CSS, and JavaScript — no frameworks, no build tools, no dependencies.
+A fully custom personal portfolio website built from scratch using only vanilla HTML, CSS, and JavaScript. No frameworks, no build tools, no dependencies.
 
 **Live site:** [fikirzelalem.github.io/my-portfolio](https://fikirzelalem.github.io/my-portfolio)
 
@@ -8,13 +8,13 @@ A fully custom personal portfolio website built from scratch using only vanilla 
 
 ## Tech Stack
 
-- **HTML5** — semantic structure
-- **CSS3** — custom properties, animations, flexbox/grid
-- **Vanilla JavaScript** — all interactivity
-- **Font Awesome** (CDN) — icons
-- **Google Fonts** (CDN) — Inter + Dancing Script typefaces
-- **Formspree** — contact form backend
-- **Git & GitHub** — version control
+- **HTML5** - semantic structure
+- **CSS3** - custom properties, animations, flexbox/grid
+- **Vanilla JavaScript** - all interactivity
+- **Font Awesome** (CDN) - icons
+- **Google Fonts** (CDN) - Inter + Dancing Script typefaces
+- **Formspree** - contact form backend
+- **Git & GitHub** - version control
 
 ---
 
@@ -30,7 +30,9 @@ A fully custom personal portfolio website built from scratch using only vanilla 
 - Animated stat counters that trigger on scroll
 - Skill progress bars that animate into view
 - Project filter tabs (All / Mobile / Full Stack / Data / Backend)
-- Individual project detail pages with descriptions, features, and screenshot slots
+- Individual project detail pages with descriptions, features, and previews
+- Lightbox image viewer on project pages
+- Custom cursor with magenta/amber particle trail
 - Certificate cards with View Certificate buttons linking to PDFs
 - Resume download button
 - Working contact form via Formspree
@@ -48,9 +50,9 @@ Each project has a dedicated detail page under `projects/`:
 |---|---|
 | Soul Fragments | `projects/soul-fragments.html` |
 | GreenRoute | `projects/greenroute.html` |
+| HBCUhire | `projects/hbcuhire.html` |
 | Personal Finance Tracker | `projects/finance-tracker.html` |
 | Real Estate Property Tool | `projects/real-estate-tool.html` |
-| Mesob | `projects/mesob.html` |
 
 ---
 
@@ -60,25 +62,29 @@ Each project has a dedicated detail page under `projects/`:
 my-portfolio/
 ├── index.html
 ├── css/
-│   ├── variables.css       # Design tokens (colors, spacing, etc.)
-│   ├── base.css            # Reset, body, orbs, typography
-│   ├── components.css      # Buttons, cards, glass styles
-│   ├── sections.css        # All section-specific styles
-│   └── project-page.css    # Project detail page layout
+│   ├── variables.css    # Design tokens (colors, spacing, etc.)
+│   ├── base.css         # Reset, body, orbs, typography
+│   ├── components.css   # Buttons, cards, glass styles
+│   ├── sections.css     # All section-specific styles
+│   └── project-page.css # Project detail page layout + lightbox
 ├── js/
-│   ├── main.js             # Nav, hamburger, theme toggle, counters, skill bars
-│   ├── typewriter.js       # Typewriter role cycling
-│   ├── hero-scroll.js      # Scroll-driven hero + section fade-in
-│   └── extras.js           # Scroll progress bar, mouse parallax
+│   ├── main.js        # Nav, hamburger, theme toggle, counters, skill bars
+│   ├── typewriter.js  # Typewriter role cycling
+│   ├── hero-scroll.js # Scroll-driven hero + section fade-in
+│   ├── extras.js      # Scroll progress bar, mouse parallax
+│   ├── theme.js       # Theme toggle logic
+│   └── cursor.js      # Custom cursor with particle trail
 ├── projects/
 │   ├── soul-fragments.html
 │   ├── greenroute.html
+│   ├── hbcuhire.html
 │   ├── finance-tracker.html
-│   ├── real-estate-tool.html
-│   └── mesob.html
+│   └── real-estate-tool.html
 └── assets/
     ├── pfp2.jpg
     ├── resume.pdf
+    ├── financeTrackerapp/
+    │   └── pft1-6.png
     └── certificates/
         ├── cloudthumb.png
         ├── codethumb.png
