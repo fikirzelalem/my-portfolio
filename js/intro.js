@@ -1,3 +1,4 @@
+//Fikir Demeke 
 // Intro splash — terminal typer with laptop + coffee
 (function () {
   var termBody = document.getElementById('terminalBody');

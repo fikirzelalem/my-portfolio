@@ -1,3 +1,5 @@
+//Fikir Demeke 
+
 // ── Custom cursor with particle trail ──
 (function () {
   // Skip on touch devices

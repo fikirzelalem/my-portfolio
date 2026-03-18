@@ -1,3 +1,4 @@
+//Fikir Demeke 
 // Theme toggle — persists to localStorage, smooth transition
 (function () {
   var btn  = document.getElementById('themeToggle');

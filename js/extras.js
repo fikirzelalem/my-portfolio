@@ -1,3 +1,4 @@
+//Fikir Demeke 
 // ── Scroll progress bar ──
 (function () {
   var bar = document.getElementById('scrollProgress');

@@ -1,3 +1,4 @@
+//Fikir Demeke 
 // Scroll-driven hero: cursive name fades out, content fades in
 (function () {
   var wrapper = document.getElementById('heroScrollWrapper');

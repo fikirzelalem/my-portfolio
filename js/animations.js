@@ -1,3 +1,4 @@
+//Fikir Demeke 
 // Scroll-driven animations:
 //   • scroll reveal  (.reveal → .revealed)
 //   • stat counters  ([data-target])
